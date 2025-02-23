@@ -1,0 +1,593 @@
+:root {
+    /* Primary colors */
+    --color-blue: #0C8DD2; 
+    
+    /* Secondary colors */
+    --color-dim-gray: rgb(103, 103, 103); /* #676767 */
+    --color-silver: #F0F0F0;
+    
+    --background: #ffffff; /* White */
+    --foreground: var(--color-dim-gray); /* Using Dim Gray as default text color */
+    
+    --primary: var(--color-blue);
+    --primary-foreground: #ffffff; /* White text on primary color */
+    
+    --secondary: var(--color-dim-gray);
+    --secondary-foreground: #ffffff; /* White text on secondary color */
+  }
+
+  body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.6;
+  }
+
+  textarea{
+    font-family: 'Roboto', sans-serif;
+  }
+
+  header{
+    background-color: var(--primary-foreground);
+    padding: .5rem 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    
+  }
+
+
+  .overlay {
+    display: none;
+  }
+  
+  .overlay-content {
+    display: none;
+  }
+  
+  .overlay a {
+    display: none;
+  }
+  
+  .hb {
+    display: none;
+  }
+  
+  .close-btn {
+    font-size: 30px;
+  }
+
+  nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  a{
+    color: black;
+    text-decoration: none;
+  }
+    a:hover{
+        color: var(--color-blue);
+    }
+.logo a{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav li{
+    padding: 10px;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 700px; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-blue); /* Fallback color */
+  }
+  
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    filter: brightness(70%);
+    z-index: 0;
+  }
+  .hero-container {
+    text-align: center;
+  }
+  .hero-container h1,.hero-container p,.hero-container button {
+    position: relative;
+    color: var(--primary-foreground);
+   
+    text-align: center;
+  }
+  .hero-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .hero-container p {
+    margin-bottom: 1rem;
+  }
+  .hero-container button {
+    padding: .8rem 4rem;
+    background-color: var(--color-blue);
+    color: var(--primary-foreground);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+    .hero-container button:hover {
+        color: var(--color-blue);
+        background-color: var(--primary-foreground);
+        transition: .2s;
+    }
+#about{
+    padding: 4rem;
+
+
+}
+.about-content-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+
+   
+}
+.about-text{
+    width: 80%;
+}
+#about h2{
+text-align: center;
+    color: black;
+    margin-bottom: 2rem;
+
+}
+.about-image{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    
+}
+
+.about-image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#events {
+    padding: 4rem;
+    background-color: var(--color-silver)
+
+}
+#events h2{
+    text-align: center;
+    color: black;
+    margin-bottom: 2rem;
+}
+.events-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+.event{
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding-bottom:1rem ; 
+    background-color: var(--primary-foreground);
+}
+.event img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.event h3, .event  p{
+    color: black;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+.event button{
+    padding: .8rem 3rem;
+    background-color: var(--color-blue);
+    color: var(--primary-foreground);
+    border: none;
+    cursor: pointer;
+    border-radius: 3rem;
+    margin: 1rem;
+}
+.event button:hover {
+    color: var(--color-blue);
+    background-color: var(--primary-foreground);
+    transition: .2s;
+}
+.pointer-prototype{
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+}
+
+#top-attractions {
+    padding: 4rem;
+    background-color: var(--primary-foreground);
+
+}
+#top-attractions h2{
+    text-align: center;
+    color: black;
+    margin-bottom: 2rem;
+}
+.ta-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    gap: 1rem;
+}
+.attraction{
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding-bottom:1rem ; 
+}
+.attraction img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.attraction h3, .attraction  p{
+    color: black;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+.attraction button{
+    padding: .8rem 3rem;
+    background-color: var(--color-blue);
+    color: var(--primary-foreground);
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    border-radius: 3rem;
+}
+.attraction button:hover {
+    color: var(--color-blue);
+    background-color: var(--primary-foreground);
+    transition: .2s;
+}
+.pointer-prototype{
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+}
+
+#travel-info{
+    padding: 4rem;
+    background-color: var(--color-silver)
+
+
+}
+#travel-info h2{
+    text-align: center;
+    color: black;
+    margin-bottom: 2rem;
+   
+}
+.ti-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    color: black;
+    gap: 2rem;
+
+}
+.ti-container button{
+    padding: .8rem 3rem;
+    background-color: var(--color-blue);
+    color: var(--primary-foreground);
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    border-radius: 3rem;
+}
+.ti-container button:hover {
+    color: var(--color-blue);
+    background-color: var(--primary-foreground);
+    transition: .2s;
+}
+#accommodations{
+    padding: 4rem;
+    color: black;
+    background-color: var(--primary-foreground);
+
+}
+#accommodations h2{
+    text-align: center;
+    color: black;
+    margin-bottom: 2rem;
+}
+.ac-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+}
+.accommodation{
+    width: 35%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding:2rem ; 
+}
+.accommodation button{
+    padding: .8rem 3rem;
+    background-color: var(--color-blue);
+    color: var(--primary-foreground);
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    
+}
+.accommodation button:hover {
+    color: var(--color-blue);
+    background-color: var(--primary-foreground);
+    transition: .2s;
+}
+#contact{
+    padding: 4rem;
+    background-color: var(--color-silver)
+
+}
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contact-text{
+    text-align: center;
+}
+.contact-text h2, .contact-text p{
+    color: black;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 800px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-container textarea {
+    resize: none;
+    height: 120px;
+}
+.contact-container button{
+    padding: .8rem 5rem;
+    background-color: var(--color-blue);
+    color: var(--primary-foreground);
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+.contact-container button:hover {
+    color: var(--color-blue);
+    background-color: var(--primary-foreground);
+    transition: .2s;
+}
+.plan-your-trip{
+    padding: 3rem;
+    background-color: var(--color-blue);
+
+}
+.plan-your-trip h3{
+    font-size: 1.8rem;
+    
+}
+
+.pyt-container{
+    padding: 3rem;
+    text-align: center;
+    color: var(--primary-foreground);
+}
+.pyt-text button{
+    padding: 1rem 3rem;
+    background-color: var(--primary-foreground);
+    color: var(--color-blue);
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-content: space-around;
+        gap: 2rem;
+        padding: 1rem;
+      }
+      .menu {
+        display: none;
+    }
+      .overlay {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0%;
+        background-color: var(--color-blue);
+        opacity: 85%;
+        overflow-x: hidden;
+        transition: 0.1s;
+      }
+    
+      .overlay-content {
+        display: block;
+        position: relative;
+        top: 0%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+    
+      .overlay a {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        font-size: 2.5rem;
+        color: white;
+        display: block;
+        transition: 0.1s;
+      }
+    
+      .overlay a:hover,
+      .overlay a:focus {
+        color: var(--color-blue);
+      }
+    
+      .hb {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: black;
+        margin-top: 1rem;
+      }
+    
+      .close-btn {
+        display: block;
+        font-size: 30px;
+      }
+      .hero {
+       
+        height: 600px; 
+
+      }
+      .hero-container h1 {
+        font-size: 2rem;
+      }
+      .about{
+        padding: 3rem;
+    
+    
+    }
+    .about-content-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+    
+       
+    }
+    .about-text{
+        padding: 1rem;
+        width: 100%;
+    }
+    .events {
+        padding: 1rem;
+    
+    }
+    .events-container{
+        flex-direction: column;
+        padding: 2rem;
+
+    }
+    .event{
+        width: 100%;
+        padding-bottom:1rem ; 
+    }
+    .pointer-prototype{
+        display: none;
+    }
+    .top-attractions {
+        padding: 1rem;
+    
+    }
+    .ta-container{
+        flex-direction: column;
+        padding: 1rem;
+    }
+.attraction{
+    width: 100%;
+    padding-bottom:1rem ; 
+}
+.travel-info{
+    padding: 1rem;
+
+
+}
+.ti-container{
+    flex-direction: column;
+    padding: 1rem;
+}
+.ac-container{
+    flex-direction: column;
+    padding: 1rem;
+}
+.accommodations{
+    padding: 2rem;
+}
+.accommodation{
+    width: 100%;
+    padding: 2rem ; 
+}
+.plan-your-trip h3{
+    font-size: 1.5rem;
+    
+}
+
+
+
+    
+}
